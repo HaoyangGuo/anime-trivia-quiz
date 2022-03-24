@@ -70,9 +70,19 @@ export default function App() {
                 // just a fallback for older browsers
                 window.scrollTo(0, 0);
             }
-            const res = await fetch("https://opentdb.com/api.php?amount=6&category=31&difficulty=medium&type=multiple")
+            const res = await fetch("https://opentdb.com/api.php?amount=6&category=31&difficulty=easy&type=multiple")
             const data = await res.json()
             const questionsTemplate = []
+
+            function shuffleArray(array) {
+                let arrayCopy = array
+                for (let i = arrayCopy.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [arrayCopy[i], arrayCopy[j]] = [arrayCopy[j], arrayCopy[i]];
+                }
+                return arrayCopy
+            }
+
             data.results.forEach(q => {
                 questionsTemplate.push({
                     id: nanoid(),
@@ -80,9 +90,11 @@ export default function App() {
                     correct_answer: htmlDecode(q.correct_answer),
                     incorrect_answers: q.incorrect_answers.map(a => htmlDecode(a)),
                     selected_answer: "",
-                    checkingResult: false
+                    checkingResult: false,
+                    answers: shuffleArray(q.incorrect_answers.map(a => htmlDecode(a)).concat(htmlDecode(q.correct_answer)))
                 })
             })
+
             setQuestions(questionsTemplate)
         }
         getQuestions()
@@ -119,7 +131,7 @@ export default function App() {
             <Question
                 key={question.id}
                 id={question.id}
-                anwsers={(question.incorrect_answers).concat(question.correct_answer)}
+                anwsers={question.answers}
                 correct={question.correct_answer}
                 question={question.question}
                 selected_answer={question.selected_answer}
