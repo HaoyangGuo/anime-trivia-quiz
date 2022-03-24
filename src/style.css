@@ -93,7 +93,7 @@ select {
 }
 
 .starter-page {
-    background: url("http:/imgs/akihabara.jpeg") no-repeat center bottom fixed;
+    background: url("./imgs/akihabara.jpeg") no-repeat center bottom fixed;
     background-size: cover;
     justify-content: center;
     align-items: center;

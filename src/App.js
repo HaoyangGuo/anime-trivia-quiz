@@ -2,6 +2,8 @@ import React from "react"
 import Question from "./components/Question"
 import { nanoid } from "nanoid"
 import "./style.css"
+import asuka from "./imgs/asuka.png"
+import shinji from "./imgs/shinji.png"
 
 export default function App() {
     const [inQuiz, setInQuiz] = React.useState(() => false)
@@ -70,7 +72,7 @@ export default function App() {
                 // just a fallback for older browsers
                 window.scrollTo(0, 0);
             }
-            const res = await fetch("https://opentdb.com/api.php?amount=6&category=31&difficulty=easy&type=multiple")
+            const res = await fetch("https://opentdb.com/api.php?amount=6&category=31&difficulty=medium&type=multiple")
             const data = await res.json()
             const questionsTemplate = []
 
@@ -149,8 +151,8 @@ export default function App() {
                 {
                 inQuiz ?   
                 <div className="quiz-page">
-                    <img className="quiz-page--img1" src="/imgs/asuka.png" alt="" />
-                    <img className="quiz-page--img2" src="/imgs/shinji.png" alt="" />
+                    <img className="quiz-page--img1" src={asuka} alt="" />
+                    <img className="quiz-page--img2" src={shinji} alt="" />
                     <div className="quiz-page--questions">
                         {questionElements}
                     </div>
