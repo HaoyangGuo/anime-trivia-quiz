@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/anime-quizzical/static/css/main.2cbe7ac5.css",
+    "main.js": "/anime-quizzical/static/js/main.cc1d2282.js",
+    "index.html": "/anime-quizzical/index.html",
+    "main.2cbe7ac5.css.map": "/anime-quizzical/static/css/main.2cbe7ac5.css.map",
+    "main.cc1d2282.js.map": "/anime-quizzical/static/js/main.cc1d2282.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2cbe7ac5.css",
+    "static/js/main.cc1d2282.js"
+  ]
+}
