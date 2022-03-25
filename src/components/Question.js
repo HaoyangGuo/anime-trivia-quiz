@@ -12,7 +12,8 @@ export default function Question(props) {
                 `${(props.selected_answer === a && props.checkingResult === false) ? "selected" : ""}` + " " + 
                 `${(props.selected_answer === a && props.checkingResult === true && props.correct === a) ? "correct" : ""}` + " " +
                 `${(props.selected_answer === a && props.checkingResult === true && props.correct !== a) ? "incorrect" : ""}` + " " +
-                `${(props.selected_answer !== a && props.checkingResult === true) ? "locked" : ""}`
+                `${(props.selected_answer !== a && props.checkingResult === true) ? "locked" : ""}` + " " +
+                `${(props.selected_answer !== a && props.checkingResult === true && props.correct === a) ? "revealed" : ""}`
             }
         >
         {a}

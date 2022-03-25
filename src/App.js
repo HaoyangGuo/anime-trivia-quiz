@@ -72,7 +72,7 @@ export default function App() {
                 // just a fallback for older browsers
                 window.scrollTo(0, 0);
             }
-            const res = await fetch("https://opentdb.com/api.php?amount=6&category=31&difficulty=medium&type=multiple")
+            const res = await fetch("https://opentdb.com/api.php?amount=10&category=31&type=multiple")
             const data = await res.json()
             const questionsTemplate = []
 
@@ -157,7 +157,7 @@ export default function App() {
                         {questionElements}
                     </div>
                     <div className="quiz-page--submit">
-                        {resultPage.activated && <div>{`You scored ${resultPage.correctNum}/6 correct answers`}</div>}
+                        {resultPage.activated && <div>{`You scored ${resultPage.correctNum}/10 correct answers`}</div>}
                         <button className="quiz-page--btn" onClick={resultPage.activated ? startNewGame : checkResult}>
                             {resultPage.activated ? "Play again" : "Check answers"}
                         </button>

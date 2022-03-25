@@ -271,6 +271,11 @@ button {
   opacity: 0.5;
 }
 
+.revealed {
+  border-color: #94D7A2 !important;
+  opacity: 1;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .quiz-window {
