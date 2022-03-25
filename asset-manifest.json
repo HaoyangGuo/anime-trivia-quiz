@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/anime-trivia-quiz/static/css/main.ea955ed8.css",
-    "main.js": "/anime-trivia-quiz/static/js/main.6c12fe80.js",
+    "main.css": "/anime-trivia-quiz/static/css/main.e04594fa.css",
+    "main.js": "/anime-trivia-quiz/static/js/main.5a1e146d.js",
     "static/media/akihabara.jpeg": "/anime-trivia-quiz/static/media/akihabara.c943af1b13f24fe986fa.jpeg",
     "static/media/asuka.png": "/anime-trivia-quiz/static/media/asuka.d9aac8287dea1c736bd2.png",
     "static/media/shinji.png": "/anime-trivia-quiz/static/media/shinji.ee43805f467d65fe8e76.png",
     "index.html": "/anime-trivia-quiz/index.html",
-    "main.ea955ed8.css.map": "/anime-trivia-quiz/static/css/main.ea955ed8.css.map",
-    "main.6c12fe80.js.map": "/anime-trivia-quiz/static/js/main.6c12fe80.js.map"
+    "main.e04594fa.css.map": "/anime-trivia-quiz/static/css/main.e04594fa.css.map",
+    "main.5a1e146d.js.map": "/anime-trivia-quiz/static/js/main.5a1e146d.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea955ed8.css",
-    "static/js/main.6c12fe80.js"
+    "static/css/main.e04594fa.css",
+    "static/js/main.5a1e146d.js"
   ]
 }
